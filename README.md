@@ -4,7 +4,9 @@ Custom Element rendering for dummies.
 
 # Motivation
 
-I wanted a convenience function for rendering in custom elements, without importing a library like Polymer that completely redefines how I create custom elements. I just want to render stuff without losing functionality, and with the same "diff/patch" virtual DOM efficiency libraries like React give me.
+I wanted a convenience function for rendering in custom elements, without importing a library like Polymer that completely redefines how I create custom elements. I just want to render stuff without losing functionality, and with the same "diff/patch" virtual DOM efficiency libraries like React gives me.
+
+This library uses [morphdom](https://github.com/patrick-steele-idem/morphdom) under the hood as the diffing engine, similar to [yo-yo](https://github.com/maxogden/yo-yo). But unlike **yo-yo**, uses a **createElement** function instead of ES6 template tags in favor of supporting JSX.
 
 # API
 
@@ -76,7 +78,7 @@ class MyCounter extends HTMLElement {
 }
 ```
 
-Ok. Kewl. Now let's let the application pass in an attribute called "buttontitle" to our custom element and use it in the render function. Really, we're just doing what we normally do with custom elements- using `this.getAttribute` to handle data passed in from the parent.
+Ok. Kewl. Now let's allow the application to pass in an attribute called "buttontitle" to our custom element and use it in the render function. Really, we're just doing what we normally do with custom elements: using `this.getAttribute` to handle data passed in from the parent.
 
 ```
 this.update = () => {
@@ -108,7 +110,6 @@ class MyCounter extends HTMLElement {
   attributeChangedCallback() {
     if (this.update) this.update()
   }
-}
 ```
 
 
