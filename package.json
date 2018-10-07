@@ -1,0 +1,39 @@
+{
+  "name": "@abradley2/dommy",
+  "version": "1.0.0",
+  "description": "Tiny-to-the-point-of-almost-being-a-joke virtual DOM utility",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "standard ./index.js && parcel serve test.html --open",
+    "build": "parcel build index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abradley2/dommy.git"
+  },
+  "keywords": [
+    "Custom Elements",
+    "Virtual DOM",
+    "Webcomponents"
+  ],
+  "author": "Tony Bradley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abradley2/dommy/issues"
+  },
+  "homepage": "https://github.com/abradley2/dommy#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-transform-react-jsx": "^7.0.0",
+    "@webcomponents/webcomponentsjs": "^2.1.3",
+    "parcel-bundler": "^1.10.2",
+    "standard": "^12.0.1",
+    "tape": "^4.9.1"
+  },
+  "dependencies": {
+    "morphdom": "^2.3.3"
+  },
+  "standard": {
+    "env": "browser"
+  }
+}
