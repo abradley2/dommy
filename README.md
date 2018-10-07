@@ -1,6 +1,9 @@
 # DOMMY
 
-Custom Element rendering for dummies.
+Custom Element rendering for dummies.  
+
+**Installation**
+`npm install --save @abradley2/dommy`  
 
 # Motivation
 
